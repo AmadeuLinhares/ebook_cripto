@@ -7,6 +7,8 @@ export declare global {
       search: undefined;
       booklist: RouteParamsBookList;
       details: undefined;
+      explore: undefined;
+      favorits: undefined;
     }
   }
 }

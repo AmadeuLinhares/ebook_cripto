@@ -7,18 +7,20 @@ import {useTheme} from 'styled-components/native';
 import * as Styles from './styles';
 import {Header} from '@components/Header';
 import {useNavigation} from '@react-navigation/native';
+import Feather from 'react-native-vector-icons/Feather';
 export const Home = () => {
   const theme = useTheme();
   const navigation = useNavigation();
   const goToEbookList = useCallback(() => {
-    navigation.navigate('search');
+    navigation.navigate('explore');
   }, [navigation]);
 
   const goToFavorites = useCallback(() => {
-    navigation.navigate('booklist', {
-      isFavorites: true,
-      searched_name: '',
-    });
+    navigation.navigate('favorits');
+  }, [navigation]);
+
+  const goToSearchCrypto = useCallback(() => {
+    navigation.navigate('search');
   }, [navigation]);
 
   const listIcon = useMemo(() => {
@@ -40,22 +42,34 @@ export const Home = () => {
       />
     );
   }, [theme.FONT_SIZE.MD, theme.colors.grey.WHITE]);
+  const cryptoIcon = useMemo(() => {
+    return (
+      <Feather
+        name="search"
+        color={theme.colors.grey.WHITE}
+        size={theme.FONT_SIZE.MD}
+      />
+    );
+  }, [theme.FONT_SIZE.MD, theme.colors.grey.WHITE]);
 
   return (
     <Styles.Container>
       <Header />
       <Styles.ContainerTitle>
-        <Typograph variant="title">E-Book</Typograph>
-        <Typograph variant="subtitle">
-          lores input dornes aqui mesmo unput dornes
-        </Typograph>
+        <Typograph variant="title">Cripto E-Book</Typograph>
+
+        <Styles.Description variant="subtitle">
+          This application you can search about criptos, add in favorite list
+          and see more details
+        </Styles.Description>
       </Styles.ContainerTitle>
       <Styles.ContainerOptions>
-        <Card icon={listIcon} onPress={goToEbookList} label="Lista de ebooks" />
+        <Card icon={listIcon} onPress={goToEbookList} label="Explore" />
+        <Card icon={favoriteIcon} onPress={goToFavorites} label="My Favorits" />
         <Card
-          icon={favoriteIcon}
-          onPress={goToFavorites}
-          label="Meus favoritos"
+          icon={cryptoIcon}
+          onPress={goToSearchCrypto}
+          label="Search especific crypto"
         />
       </Styles.ContainerOptions>
     </Styles.Container>

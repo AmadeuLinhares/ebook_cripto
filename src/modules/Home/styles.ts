@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-
+import {Typograph} from '@components/Typograph';
 export const Container = styled.View`
   flex: 1;
   justify-content: center;
@@ -20,4 +20,8 @@ export const ContainerOptions = styled.View`
   background-color: ${({theme}) => theme.colors.transparent};
   flex-wrap: wrap;
   width: 100%;
+`;
+
+export const Description = styled(Typograph)`
+  text-align: center;
 `;

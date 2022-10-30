@@ -14,7 +14,7 @@ export type RawError = {
 export type ErrorRequest = AxiosError<RawError>;
 
 type DefaultResponse<Data> = {
-  items: Data;
+  data: Data;
 };
 
 export type RawResponse<Data> = DefaultResponse<Data>;

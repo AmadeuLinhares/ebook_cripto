@@ -6,7 +6,7 @@ import {selectSetSearchKey, useSearchKey} from '@stores/useSearchKey';
 import React, {useCallback, useMemo, useState} from 'react';
 import * as Styles from './styles';
 
-export const SearchEbook = () => {
+export const SearchCripto = () => {
   const navigation = useNavigation();
   const setKeyWord = useSearchKey(selectSetSearchKey);
   const [search, setSearch] = useState('');
