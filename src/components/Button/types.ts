@@ -5,4 +5,5 @@ export interface ButtonProps extends TouchableOpacityProps {
   children: string;
   onError?: boolean;
   helpText?: string;
+  isLoading?: boolean;
 }

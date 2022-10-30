@@ -5,7 +5,7 @@ export const Container = styled.View`
   flex: 1;
   background-color: ${({theme}) => theme.colors.grey.GRAY_600};
 `;
-export const Search = styled.View`
+export const Search = styled.KeyboardAvoidingView`
   justify-content: center;
   align-items: center;
   flex: 1;

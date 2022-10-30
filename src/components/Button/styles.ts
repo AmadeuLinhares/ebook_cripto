@@ -26,3 +26,7 @@ export const ButtonText = styled.Text`
   font-size: ${({theme}) => theme.FONT_SIZE.MD};
   text-transform: capitalize;
 `;
+
+export const Loading = styled.ActivityIndicator.attrs(props => ({
+  color: props.theme.colors.grey.WHITE,
+}))``;

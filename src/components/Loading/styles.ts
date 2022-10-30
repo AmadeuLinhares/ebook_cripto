@@ -8,9 +8,10 @@ export const Container = styled.View`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: ${({theme}) => theme.colors.grey.GRAY_400};
+  background-color: ${({theme}) => theme.colors.grey.GRAY_700};
+  opacity: 0.5;
 `;
 
 export const LoadingIndicator = styled.ActivityIndicator.attrs(({theme}) => ({
-  color: theme.colors.grey.GRAY_700,
+  color: theme.colors.grey.WHITE,
 }))``;

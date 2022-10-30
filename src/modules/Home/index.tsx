@@ -56,10 +56,10 @@ export const Home = () => {
     <Styles.Container>
       <Header />
       <Styles.ContainerTitle>
-        <Typograph variant="title">Cripto E-Book</Typograph>
+        <Typograph variant="title">Crypto E-Book</Typograph>
 
         <Styles.Description variant="subtitle">
-          This application you can search about criptos, add in favorite list
+          This application you can search about cryptos, add in favorite list
           and see more details
         </Styles.Description>
       </Styles.ContainerTitle>

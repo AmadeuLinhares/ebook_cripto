@@ -1,7 +1,8 @@
+import {toastConfig} from '@configs/toast';
 import {Auth} from '@layouts/auth';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import React from 'react';
-
+import Toast from 'react-native-toast-message';
 const App = () => {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Auth />
+      <Toast config={toastConfig} />
     </QueryClientProvider>
   );
 };

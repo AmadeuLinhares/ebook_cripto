@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import styled from 'styled-components/native';
 
 export const ContainerHeader = styled.View`
@@ -7,7 +8,10 @@ export const ContainerHeader = styled.View`
   align-items: center;
   padding-left: ${({theme}) => theme.SPACINGS.spacing16};
   padding-right: ${({theme}) => theme.SPACINGS.spacing16};
-  padding-top: ${({theme}) => theme.SPACINGS.spacing16};
+  padding-top: ${({theme}) =>
+    Platform.OS === 'ios'
+      ? theme.SPACINGS.spacing16
+      : theme.SPACINGS.spacing48};
   padding-bottom: ${({theme}) => theme.SPACINGS.spacing16};
 `;
 export const Container = styled.View`

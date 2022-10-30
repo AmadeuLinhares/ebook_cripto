@@ -126,7 +126,7 @@ export const CriptoCard = ({
             <Styles.QuotationValue
               variant="body2"
               isPositive={percent_change_usd_last_24_hours > 0}>
-              {formatUSD(price_usd)}
+              {percent_change_usd_last_24_hours?.toFixed(3)}
             </Styles.QuotationValue>
           </Styles.Quotation>
         </Styles.ContainerValues>

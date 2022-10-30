@@ -24,4 +24,5 @@ export const ContainerOptions = styled.View`
 
 export const Description = styled(Typograph)`
   text-align: center;
+  margin-top: ${({theme}) => theme.SPACINGS.spacing12};
 `;
