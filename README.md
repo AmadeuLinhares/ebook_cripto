@@ -3,6 +3,7 @@
 - **React Native: 0.70.1**
 - **Ruby (Used ASDF as version manager): ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [arm64-darwin21]**
 - **pod: 1.11.3**
+- **node: 16.15.0**
 - **Gradle JDK: 11.0.13**
 - **Java (Used ASDF as version manager):** 
     - openjdk 11.0.17 2022-10-18 LTS
@@ -57,3 +58,12 @@ In a favorite list, we have a option to unfavorite all cryptos that user wants (
 ### Step 3
     yarn ios
     yarn android
+    
+    
+![This is an image](https://user-images.githubusercontent.com/44333365/199056108-ef2e489c-596c-4f49-bd21-f433180505dc.png)
+ 
+ 
+## Folder Struct
+    
+    
+    
