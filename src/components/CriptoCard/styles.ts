@@ -56,3 +56,9 @@ export const QuotationValue = styled(Typograph)<QuotationProgress>`
 export const ContainerWithImg = styled.View`
   flex-direction: row;
 `;
+export const Logo = styled.View`
+  justify-content: center;
+  align-items: center;
+  margin-right: ${({theme}) => theme.SPACINGS.spacing16};
+  border-radius: ${({theme}) => theme.RADII.medium};
+`;

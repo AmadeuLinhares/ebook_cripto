@@ -37,7 +37,23 @@
 
 * **typescript (^4.8.3)**
   
-  
+
+## Features and functionality
+
+- [x] Home screen
+- [x] Crypto list
+- [x] Like crypto
+- [x] Unlike crytpo
+- [x] Favorite list
+- [x] Add on favorite list
+- [x] Remove from favorite list
+- [x] Absolute imports
+- [x] Components
+- [x] Types
+- [x] Front-end cache
+- [x] Performance
+- [x] Theme
+
   
 ## Implementation
 
@@ -64,6 +80,50 @@ In a favorite list, we have a option to unfavorite all cryptos that user wants (
  
  
 ## Folder Struct
-    
+```
+src/
+    @types/
+        Definition of global types in aplication
+
+    @api/
+        Axios definition
+        Type axios request and axios response
+        Create function to parse response used in react query
+
+    @components/
+        Global componentes
+
+    @configs/
+        To create a especific config, for exemplate, a lib config (Toast Lib)
+
+    @layouts/
+        This folder was created to allow the transition of layouts between authenticated and unauthenticated users.
+        Even if our application doesn't have authentication, it would make it easier if we ever need to add it. Apart from that we could build other types of layout for specific houses that did not have access to certain contents of our application, such as providers, etc.
+
+    @modules/
+        This folder was created to build application modules. For example, we have the Home module, so all types, components (non-global), home styles, are inside this module. Thus, the screen folder is cleaner and will be used for things global to this module, like a Header.
+
+    @routes/
+        Aplication routes
+
+    @Screens/
+        Call module folder and is used to add global componentes or behavior that should not to been inside modules folder.
+        For exemple, Header componente. We could add this componente inside this folder.
+
+    @services/
+        Create hooks using react-query to call api
+
+    @stores/
+        Global store to save datas that we need to use in a global scope
+
+    @theme/
+        Global theme and tokens
+
+    @utils/
+        Util functionality like format date/money
+
+
+```
+
     
     

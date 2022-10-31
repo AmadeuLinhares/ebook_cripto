@@ -18,7 +18,7 @@ export const ExploreCriptos = () => {
   const criptoList = useMemo(() => data?.pages?.flat() || [], [data?.pages]);
 
   const setGlobalLoading = useLoading(selectSetLoading);
-  console.log('=====>', data);
+
   useEffect(() => {
     setGlobalLoading(isRefetching || isLoading);
   }, [isLoading, isRefetching, setGlobalLoading]);

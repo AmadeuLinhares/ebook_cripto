@@ -5,7 +5,6 @@ import * as Styles from './styles';
 
 export const Button = ({children, isLoading, ...rest}: ButtonProps) => {
   const renderContent = useMemo(() => {
-    console.log(isLoading);
     if (isLoading) {
       return <Styles.Loading />;
     }

@@ -18,7 +18,7 @@ export function renderItem({item}: ListRenderItemInfo<CriptoList>) {
       }
       price_usd={item.metrics.market_data.price_usd}
       slug={item.slug}
-      symbol={item.slug}
+      symbol={item.symbol}
     />
   );
 }

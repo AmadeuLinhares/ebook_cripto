@@ -6,7 +6,6 @@ import {useMemo} from 'react';
 import {CriptoCard} from '@components/CriptoCard';
 export const Favorits = () => {
   const favoritesData = useFavorites(selectFavorites);
-  console.log('favoritesData', favoritesData);
 
   const renderFavorites = useMemo(() => {
     if (favoritesData.length) {

@@ -1,6 +1,7 @@
 import {useCallback, useMemo} from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import EntypoIcon from 'react-native-vector-icons/Entypo';
+import Foundation from 'react-native-vector-icons/Foundation';
+
 import * as Styles from './styles';
 import {useTheme} from 'styled-components/native';
 import {TouchableOpacity} from 'react-native';
@@ -9,15 +10,16 @@ import {useNavigation} from '@react-navigation/native';
 export const Header = () => {
   const theme = useTheme();
   const navigation = useNavigation();
+
   const Logo = useMemo(() => {
     return (
-      <EntypoIcon
-        name="open-book"
+      <Foundation
+        name={'bitcoin-circle'}
         color={theme.colors.grey.GRAY_100}
-        size={theme.FONT_SIZE.XL}
+        size={theme.FONT_SIZE.XXXL}
       />
     );
-  }, [theme.FONT_SIZE.XL, theme.colors.grey.GRAY_100]);
+  }, [theme.FONT_SIZE.XXXL, theme.colors.grey.GRAY_100]);
 
   const goBack = useCallback(() => {
     navigation.goBack();

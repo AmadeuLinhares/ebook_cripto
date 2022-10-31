@@ -1,6 +1,7 @@
 import {Typograph} from '@components/Typograph';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
+import Foundation from 'react-native-vector-icons/Foundation';
 import React, {useCallback, useMemo} from 'react';
 import * as Styles from './styles';
 import {useTheme} from 'styled-components';
@@ -12,11 +13,6 @@ import {
 } from '@stores/useFavorites';
 import {RenderCriptosProps} from '@components/CriptoCard/types';
 import {formatUSD} from '@utils/formatters';
-// import {useNavigation} from '@react-navigation/native';
-// import {selectSetDetail, useBookDetail} from '@stores/useBookDetail';
-
-const mockImage =
-  'https://books.google.com/books/content?id=xEApjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api';
 
 export const CriptoCard = ({
   id,
@@ -27,16 +23,10 @@ export const CriptoCard = ({
   symbol,
 }: RenderCriptosProps) => {
   const theme = useTheme();
-  // const navigation = useNavigation();
-  // const setDetails = useBookDetail(selectSetDetail);
-  // Mostrar exemplo com selectors e como eles afetam o render impedindo re-render desnecessarios
+
   const addFavorite = useFavorites(selectSetFavorites);
   const removeFavorite = useFavorites(selectRemoveFavorites);
   const favoritesList = useFavorites(selectFavorites);
-
-  const goToDetails = useCallback(() => {
-    console.log('go details');
-  }, []);
 
   const verifyIfIsLiked =
     !!favoritesList.length &&
@@ -98,22 +88,27 @@ export const CriptoCard = ({
     theme.colors.green.GREEN_700,
     theme.colors.red.RED_DARK,
   ]);
+  const LogoIcon = useMemo(() => {
+    return (
+      <Foundation
+        name={'bitcoin-circle'}
+        color={theme.colors.grey.WHITE}
+        size={theme.FONT_SIZE.XXXL}
+      />
+    );
+  }, [theme.FONT_SIZE.XXXL, theme.colors.grey.WHITE]);
 
   return (
-    <Styles.Container onPress={goToDetails}>
+    <Styles.Container>
       <Styles.CardContainer>
         <Styles.ContainerWithImg>
-          <Styles.Image
-            source={{
-              uri: mockImage,
-            }}
-          />
+          <Styles.Logo>{LogoIcon}</Styles.Logo>
           <Styles.Text>
             <Styles.ContainerTitle>
-              <Typograph variant="body1">{name}</Typograph>
+              <Typograph variant="body1">{symbol}</Typograph>
             </Styles.ContainerTitle>
             <Styles.ContainerSubTitle>
-              <Typograph variant="body2">{symbol}</Typograph>
+              <Typograph variant="body2">{name}</Typograph>
             </Styles.ContainerSubTitle>
           </Styles.Text>
         </Styles.ContainerWithImg>

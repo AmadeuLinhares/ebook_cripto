@@ -29,6 +29,8 @@ export default {
     MD: 16,
     LG: 18,
     XL: 24,
+    XXL: 28,
+    XXXL: 32,
   },
   SPACINGS: {
     spacing0: 0,
