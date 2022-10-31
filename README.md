@@ -53,6 +53,7 @@
 - [x] Front-end cache
 - [x] Performance
 - [x] Theme
+- [ ] Get crypto images (I didnt find imgaes return in api :/ )
 
   
 ## Implementation
@@ -76,7 +77,7 @@ In a favorite list, we have a option to unfavorite all cryptos that user wants (
     yarn android
     
     
-![This is an image](https://user-images.githubusercontent.com/44333365/199056108-ef2e489c-596c-4f49-bd21-f433180505dc.png)
+![aplication image](https://user-images.githubusercontent.com/44333365/199056108-ef2e489c-596c-4f49-bd21-f433180505dc.png)
  
  
 ## Folder Struct
@@ -125,5 +126,17 @@ src/
 
 ```
 
+## End points
     
+    Get all criptos
+        https://data.messari.io/api/v2/assets
+            Query params: ?page=${number}&limit=${number}
+
+    Get Details
+        https://data.messari.io/api/v1/assets/{{ _.name }}/metrics/market-data
+
+## Video
     
+https://user-images.githubusercontent.com/44333365/199070019-586d43aa-68bd-4f55-940b-5ea367a67011.mov
+
+
